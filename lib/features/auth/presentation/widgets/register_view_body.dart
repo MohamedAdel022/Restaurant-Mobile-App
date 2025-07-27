@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:restaurant_mobile_app/features/auth/presentation/manager/signup_cubit/signup_cubit.dart';
-import 'package:restaurant_mobile_app/features/auth/presentation/widgets/Custom_button.dart';
+import 'package:restaurant_mobile_app/features/auth/presentation/widgets/custom_button.dart';
 import 'package:restaurant_mobile_app/features/auth/presentation/widgets/already_have_account_widget.dart';
 import 'package:restaurant_mobile_app/features/auth/presentation/widgets/custom_divider.dart';
 import 'package:restaurant_mobile_app/features/auth/presentation/widgets/custom_text_form_field.dart';
