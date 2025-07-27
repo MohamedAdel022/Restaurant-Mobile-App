@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:restaurant_mobile_app/core/theming/styles.dart';
 
 class LoginCustomAppBar extends StatelessWidget {
   const LoginCustomAppBar({super.key});
@@ -16,36 +17,20 @@ class LoginCustomAppBar extends StatelessWidget {
             children: [
               TextSpan(
                 text: 'Login to your\n',
-                style: TextStyle(
-                  color: const Color(0xFF0F0F0F),
-                  fontSize: 32.sp,
-                  fontWeight: FontWeight.w600,
-                  height: 1.25,
-                ),
+                style: AppTextStyles.semiBold32Black,
               ),
               TextSpan(
                 text: 'account.\n',
-                style: TextStyle(
-                  color: const Color(0xFF0F0F0F),
-                  fontSize: 32.sp,
-                  fontWeight: FontWeight.w600,
-                  height: 1.25,
-                ),
+                style: AppTextStyles.semiBold32Black,
               ),
               TextSpan(
                 text: 'Please sign in to your account',
-                style: TextStyle(
-                  color: const Color(0xFF878787),
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w500,
-                  height: 1.43,
-                ),
+                style: AppTextStyles.medium14Gray,
               ),
             ],
           ),
         ),
       ],
     );
- 
   }
 }

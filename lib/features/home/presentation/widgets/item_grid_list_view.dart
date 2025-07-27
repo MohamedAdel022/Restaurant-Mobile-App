@@ -1,23 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:restaurant_mobile_app/core/theming/styles.dart';
 import 'package:restaurant_mobile_app/core/utils/assets.dart';
+import 'package:restaurant_mobile_app/features/home/domin/entities/food_entity.dart';
 
 class FoodCard extends StatelessWidget {
-  final String imageUrl;
-  final String title;
-  final double rating;
-  final String distance;
-  final int price;
+  final FoodEntity item;
 
-  const FoodCard({
-    super.key,
-    required this.imageUrl,
-    required this.title,
-    required this.rating,
-    required this.distance,
-    required this.price,
-  });
+  const FoodCard({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {
@@ -62,14 +53,7 @@ class FoodCard extends StatelessWidget {
                 ),
                 Padding(
                   padding: EdgeInsets.all(8.0),
-                  child: Text(
-                    title,
-                    style: TextStyle(
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
-                  ),
+                  child: Text(item.title, style: AppTextStyles.bold16Black),
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8.0),
@@ -81,11 +65,8 @@ class FoodCard extends StatelessWidget {
                           Icon(Icons.star, color: Colors.amber, size: 16.sp),
                           SizedBox(width: 4.w),
                           Text(
-                            rating.toString(),
-                            style: TextStyle(
-                              fontSize: 14.sp,
-                              color: Colors.black54,
-                            ),
+                            item.rating.toString(),
+                            style: AppTextStyles.regular14Gray,
                           ),
                         ],
                       ),
@@ -95,11 +76,8 @@ class FoodCard extends StatelessWidget {
                           SvgPicture.asset(Assets.smallLocationIcon),
                           SizedBox(width: 4.w),
                           Text(
-                            distance,
-                            style: TextStyle(
-                              fontSize: 14.sp,
-                              color: Colors.black54,
-                            ),
+                            item.distance,
+                            style: AppTextStyles.regular14Gray,
                           ),
                         ],
                       ),
@@ -109,12 +87,8 @@ class FoodCard extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
-                    '\$$price',
-                    style: TextStyle(
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.orange,
-                    ),
+                    '\$${item.price}',
+                    style: AppTextStyles.bold16Orange,
                   ),
                 ),
               ],

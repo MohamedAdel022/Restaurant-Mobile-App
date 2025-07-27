@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurant_mobile_app/features/home/domin/entities/food_entity.dart';
 import 'package:restaurant_mobile_app/features/home/presentation/widgets/item_grid_list_view.dart';
 
 class FoodGridView extends StatelessWidget {
@@ -13,15 +14,9 @@ class FoodGridView extends StatelessWidget {
         mainAxisSpacing: 8.0,
         childAspectRatio: 0.76,
       ),
-      itemCount: 10,
+      itemCount: foodList.length,
       itemBuilder: (context, index) {
-        return FoodCard(
-          imageUrl: 'https://example.com/image.jpg',
-          title: 'Ordinary Burgers',
-          rating: 4.5,
-          distance: '2 km',
-          price: 17230,
-        );
+        return FoodCard(item: foodList[index]);
       },
     );
   }

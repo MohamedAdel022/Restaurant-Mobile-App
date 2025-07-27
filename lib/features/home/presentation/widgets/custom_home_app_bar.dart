@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:restaurant_mobile_app/core/theming/styles.dart';
 import 'package:restaurant_mobile_app/core/utils/assets.dart';
 import 'package:restaurant_mobile_app/features/auth/presentation/widgets/custom_icon_button.dart';
 
@@ -33,13 +34,7 @@ class CustomHomeAppBar extends StatelessWidget {
                         Text(
                           'Your Location',
                           textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 14,
-                            fontFamily: 'Inter',
-                            fontWeight: FontWeight.w400,
-                            height: 1.43,
-                          ),
+                          style: AppTextStyles.regular14White,
                         ),
                         SizedBox(width: 5.w),
                         Icon(
@@ -57,13 +52,7 @@ class CustomHomeAppBar extends StatelessWidget {
                         Text(
                           'New York City',
                           textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 14,
-                            fontFamily: 'Inter',
-                            fontWeight: FontWeight.w600,
-                            height: 1.43,
-                          ),
+                          style: AppTextStyles.semiBold14White,
                         ),
                       ],
                     ),
@@ -88,13 +77,7 @@ class CustomHomeAppBar extends StatelessWidget {
             Spacer(),
             Text(
               'Provide the best food for you',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 32.sp,
-                fontFamily: 'Inter',
-                fontWeight: FontWeight.w600,
-                height: 1.25,
-              ),
+              style: AppTextStyles.semiBold32White,
             ),
           ],
         ),

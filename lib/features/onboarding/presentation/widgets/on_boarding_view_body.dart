@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:restaurant_mobile_app/core/router/routes.dart';
+import 'package:restaurant_mobile_app/core/theming/styles.dart';
 import 'package:restaurant_mobile_app/core/utils/assets.dart';
 import 'package:restaurant_mobile_app/features/onboarding/domin/entities/on_boarding_entity.dart';
 import 'package:restaurant_mobile_app/features/onboarding/presentation/widgets/on_boarding_page_view.dart';
@@ -148,11 +149,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                                 },
                                 child: Text(
                                   'Skip',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14.sp,
-                                    fontWeight: FontWeight.w600,
-                                  ),
+                                  style: AppTextStyles.semiBold14White,
                                 ),
                               ),
                               GestureDetector(
@@ -164,11 +161,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                                 },
                                 child: Text(
                                   'Next',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14.sp,
-                                    fontWeight: FontWeight.w600,
-                                  ),
+                                  style: AppTextStyles.semiBold14White,
                                 ),
                               ),
                             ],
