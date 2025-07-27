@@ -45,6 +45,9 @@ jobs:
           name: android-apk
           path: build/app/outputs/flutter-apk/app-release.apk
 
+      - name: 🚀 Install Firebase CLI
+        run: npm install -g firebase-tools
+
       - name: Distribute APK via Firebase
         run: |
           firebase appdistribution:distribute build/app/outputs/flutter-apk/app-release.apk \
